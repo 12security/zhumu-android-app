@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout n1:orientation="vertical" n1:id="@id/LinearLayout1" n1:paddingLeft="10.0dip" n1:paddingRight="10.0dip" n1:layout_width="fill_parent" n1:layout_height="fill_parent"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <EditText n1:id="@id/editUserName" n1:paddingTop="10.0dip" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:hint="@string/http_auth_dialog_username" n1:ems="10">
+        <requestFocus />
+    </EditText>
+    <EditText n1:id="@id/editPassword" n1:paddingTop="10.0dip" n1:paddingBottom="20.0dip" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n1:hint="@string/http_auth_dialog_password" n1:ems="10" n1:inputType="textPassword" />
+</LinearLayout>

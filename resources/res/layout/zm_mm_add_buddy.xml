@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<us.zoom.androidlib.widget.ZMDialogRootLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/zm_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:layout_width="340dp" android:layout_height="0dp"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="192dp">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/layoutInput" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="144dp">
+            <EditText android:gravity="center" android:id="@+id/edtEmail" android:layout_width="200dp" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:hint="@string/zm_hint_enter_email" android:singleLine="true" android:maxLength="128" android:inputType="textEmailAddress" android:imeOptions="actionDone"/>
+            <View android:background="@drawable/zm_dialog_btn_bg" android:layout_width="210dp" android:layout_height="1dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <TextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zm_description_add_buddy" android:singleLine="false" style="@style/ZMTextView.Small.Dimmed"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/layoutResult" android:background="@color/zm_white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="144dp">
+            <com.zipow.videobox.view.AvatarView android:id="@+id/avatarView" android:layout_width="60dp" android:layout_height="60dp" android:layout_marginTop="24dp" android:layout_marginBottom="12dp"/>
+            <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/txtResultDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@style/ZMTextView.Normal.Dimmed"/>
+        </LinearLayout>
+        <Button android:gravity="center" android:id="@+id/btnResultAction" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/zm_btn_add_contact" style="@style/ZMTextView.Large.OnDark"/>
+    </LinearLayout>
+</us.zoom.androidlib.widget.ZMDialogRootLayout>

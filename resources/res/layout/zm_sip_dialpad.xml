@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/zm_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button android:id="@+id/btnClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/zm_btn_close" style="@style/ZMButton.NoBackground"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_centerHorizontal="true">
+            <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/panelDialNum" android:layout_width="match_parent" android:layout_height="40dp">
+                <TextView android:ellipsize="start" android:gravity="center" android:id="@+id/txtDialNum" android:layout_width="250dp" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_centerHorizontal="true" style="@style/ZMTextView.Dialpad"/>
+                <ImageView android:id="@+id/imgDelete" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:src="@drawable/zm_ic_digi_delete" android:layout_alignParentRight="true" android:contentDescription="@string/zm_btn_delete"/>
+            </RelativeLayout>
+            <TextView android:gravity="center" android:id="@+id/txtRegisterSipNo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:singleLine="true" style="@style/ZMTextView.Normal.OnLight"/>
+        </LinearLayout>
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView android:textColor="@color/zm_call_history_name_miss" android:gravity="center" android:id="@+id/txtSipUnvailable" android:paddingLeft="20dp" android:paddingRight="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:text="@string/zm_mm_msg_sip_unavailable_14480" style="@style/ZMTextView.Large"/>
+        <ImageView android:id="@+id/btnDial" android:layout_width="@dimen/zm_sip_dialpad_key_width" android:layout_height="@dimen/zm_sip_dialpad_key_width" android:layout_marginTop="10dp" android:layout_marginBottom="40dp" android:src="@drawable/zm_sip_start_call" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+        <com.zipow.videobox.view.sip.DialKeyboardView android:id="@+id/panelKeybord" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:layout_above="@+id/btnDial" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="5dp" android:layout_marginRight="8dp" android:layout_marginBottom="5dp">
+    <com.suirui.zhumu.util.HtmlTextView android:gravity="center" android:layout_gravity="center_vertical" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/zm_msg_agree_new_rule_message"/>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector>
+    <item n1:state_enabled="false" n1:state_checked="true" n1:drawable="@drawable/zm_toggle_on_disabled"
+      xmlns:n1="http://schemas.android.com/apk/res/android" />
+    <item n2:state_focused="true" n2:state_checked="false" n2:drawable="@drawable/zm_toggle_off_pressed"
+      xmlns:n2="http://schemas.android.com/apk/res/android" />
+    <item n3:state_checked="false" n3:state_pressed="false" n3:drawable="@drawable/zm_toggle_off_normal"
+      xmlns:n3="http://schemas.android.com/apk/res/android" />
+    <item n4:state_checked="false" n4:state_pressed="true" n4:drawable="@drawable/zm_toggle_off_pressed"
+      xmlns:n4="http://schemas.android.com/apk/res/android" />
+    <item n5:state_focused="true" n5:state_checked="true" n5:drawable="@drawable/zm_toggle_on_normal"
+      xmlns:n5="http://schemas.android.com/apk/res/android" />
+    <item n6:state_checked="true" n6:state_pressed="false" n6:drawable="@drawable/zm_toggle_on_normal"
+      xmlns:n6="http://schemas.android.com/apk/res/android" />
+    <item n7:state_checked="true" n7:state_pressed="true" n7:drawable="@drawable/zm_toggle_on_normal"
+      xmlns:n7="http://schemas.android.com/apk/res/android" />
+</selector>

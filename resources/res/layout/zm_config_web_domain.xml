@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<us.zoom.androidlib.widget.ZMDialogRootLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/zm_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <View android:layout_width="340dp" android:layout_height="0dp"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="40dp" android:layout_width="match_parent" android:layout_height="192dp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/zm_white" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="104dp">
+            <EditText android:gravity="center" android:id="@+id/edtWebDomain" android:layout_width="240dp" android:layout_height="wrap_content" android:text="" android:hint="@string/zm_hint_company_domain" android:singleLine="true" android:maxLength="128" android:inputType="textEmailAddress" android:imeOptions="actionDone"/>
+            <View android:background="@drawable/zm_dialog_btn_bg" android:layout_width="240dp" android:layout_height="1dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+            <TextView android:paddingLeft="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/zm_mm_lbl_enter_company_domain" style="@style/ZMTextView.Small.Dimmed"/>
+        </LinearLayout>
+        <Button android:gravity="center" android:id="@+id/btnContinue" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/zm_btn_continue" style="@style/ZMTextView.Large.OnDark"/>
+    </LinearLayout>
+</us.zoom.androidlib.widget.ZMDialogRootLayout>

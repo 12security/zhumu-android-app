@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector>
+    <item n1:state_pressed="true"
+      xmlns:n1="http://schemas.android.com/apk/res/android">
+        <shape n1:shape="rectangle">
+            <corners n1:radius="@dimen/zm_toolbar_radius" />
+            <gradient n1:startColor="#ff26a0ed" n1:endColor="#ff26a0ed" n1:angle="0.0" />
+        </shape>
+    </item>
+    <item n2:state_focused="true"
+      xmlns:n2="http://schemas.android.com/apk/res/android">
+        <shape n2:shape="rectangle">
+            <corners n2:radius="@dimen/zm_toolbar_radius" />
+            <gradient n2:startColor="#ff2db9ff" n2:endColor="#ff2db9ff" n2:angle="0.0" />
+        </shape>
+    </item>
+    <item n3:state_enabled="false"
+      xmlns:n3="http://schemas.android.com/apk/res/android">
+        <shape n3:shape="rectangle">
+            <corners n3:radius="@dimen/zm_toolbar_radius" />
+            <gradient n3:startColor="#ffe3e3ed" n3:endColor="#ffd9d9e3" n3:angle="0.0" />
+        </shape>
+    </item>
+    <item>
+        <shape n4:shape="rectangle"
+          xmlns:n4="http://schemas.android.com/apk/res/android">
+            <corners n4:radius="@dimen/zm_toolbar_radius" />
+            <gradient n4:startColor="#ff2db9ff" n4:endColor="#ff2da5ff" n4:angle="0.0" />
+        </shape>
+    </item>
+</selector>

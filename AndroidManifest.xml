@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="com.suirui.zhumu">
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-feature android:glEsVersion="0x00020000"/>
+    <permission-group android:label="@string/zm_permission_group" android:name="com.suirui.zhumu.permission-group.ZOOM_TOOLS"/>
+    <permission android:description="@string/zm_permission_change_config_desc" android:icon="@drawable/zm_launcher" android:label="@string/zm_permission_change_config_label" android:name="com.suirui.zhumu.permission.CHANGE_CONFIG" android:permissionGroup="com.suirui.zhumu.permission-group.ZOOM_TOOLS" android:protectionLevel="signature"/>
+    <permission android:description="@string/zm_permission_read_config_desc" android:icon="@drawable/zm_launcher" android:label="@string/zm_permission_read_config_label" android:name="com.suirui.zhumu.permission.READ_CONFIG" android:permissionGroup="com.suirui.zhumu.permission-group.ZOOM_TOOLS" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.suirui.zhumu"/>
+    <permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.suirui.zhumu" android:protectionLevel="normal"/>
+    <permission android:name="com.suirui.zhumu.permission.KUBI_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.suirui.zhumu.permission.KUBI_MESSAGE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <meta-data android:name="android.support.VERSION" android:value="25.3.1"/>
+    <permission android:name="com.suirui.zhumu.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.suirui.zhumu.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.sony.mobile.permission.SYSTEM_UI_VISIBILITY_EXTENSION"/>
+    <application android:icon="@drawable/zm_launcher" android:label="@string/zm_app_name" android:largeHeap="true" android:name="com.tencent.StubShell.TxAppEntry" android:resizeableActivity="true">
+        <meta-data android:name="TxAppEntry" android:value="com.zipow.videobox.ZoomApplication"/>
+        <activity android:icon="@drawable/zm_launcher" android:label="@string/zm_app_name" android:name="com.zipow.videobox.LauncherActivity" android:theme="@style/ZMTheme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/zm_app_name" android:name="com.suirui.zhumu.ui.RegisterActivity" android:theme="@style/ZMTheme.MainWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:launchMode="singleTask" android:name="com.zipow.videobox.JoinByURLActivity" android:theme="@style/ZMTheme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:host="www.zhumu.me"/>
+                <data android:pathPattern="/j/.*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="https"/>
+                <data android:host="www.zhumu.me"/>
+                <data android:pathPattern="/j/.*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:host="www.zhumu.me"/>
+                <data android:pathPattern="/w/.*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="https"/>
+                <data android:host="www.zhumu.me"/>
+                <data android:pathPattern="/w/.*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="zhumu"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent1104231481"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <provider android:authorities="com.suirui.zhumu.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <receiver android:name="com.zipow.videobox.config.ConfigWriter" android:permission="com.suirui.zhumu.permission.CHANGE_CONFIG">
+            <intent-filter>
+                <action android:name="us.zoom.videomeetings.intent.action.CHANGE_CONFIG"/>
+                <action android:name="us.zoom.videomeetings.intent.action.RESET_CONFIG"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.zipow.videobox.config.ConfigReader" android:permission="com.suirui.zhumu.permission.READ_CONFIG">
+            <intent-filter>
+                <action android:name="us.zoom.videomeetings.intent.action.READ_CONFIG"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.suirui.zhumu"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.suirui.zhumu"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.zipow.videobox.nos.BaiduPushReceiver">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE"/>
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE"/>
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW"/>
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK"/>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD"/>
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="false" android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="false" android:exported="true" android:name="com.baidu.android.pushservice.CommandService"/>
+        <provider android:authorities="com.suirui.zhumu.bdpush" android:enabled="false" android:exported="true" android:name="com.baidu.android.pushservice.PushInfoProvider" android:protectionLevel="signature" android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.suirui.zhumu"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:launchMode="singleTask" android:name="com.zipow.videobox.MMShareActivity" android:theme="@style/ZMTheme.Transparent"/>
+        <activity-alias android:enabled="false" android:label="@string/zm_mm_send_to_zoom_buddies" android:name="us.zoom.videomeetings.SendFileActivity" android:targetActivity="com.zipow.videobox.MMShareActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/*"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="audio/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="audio/*"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/*"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="true" android:launchMode="singleTask" android:name="com.zipow.videobox.IntegrationActivity" android:theme="@style/ZMTheme.Transparent"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:launchMode="singleTop" android:name="com.zipow.videobox.ProgressActivity" android:theme="@style/ProgressTheme"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.MeetingEndMessageActivity" android:theme="@style/ZMDialog.Transparent"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.VerifyPhoneActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:label="@string/zm_app_name" android:launchMode="singleTask" android:name="com.zipow.videobox.LoginActivity" android:theme="@style/ZMTheme.MainWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:label="@string/zm_app_name" android:name="com.zipow.videobox.JoinConfActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:hardwareAccelerated="false" android:launchMode="singleTask" android:name="com.zipow.videobox.IMActivity" android:theme="@style/ZMTheme.MainWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.zipow.videobox.IMChatActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.InviteActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.zipow.videobox.CallingActivity" android:taskAffinity=":Calling" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:name="com.zipow.videobox.SettingActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:name="com.zipow.videobox.FeedbackActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.BuddyInviteActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.ScheduleActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.AudioOptionActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.SignupActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.ForgetPasswordActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.SetPasswordActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.MeetingInfoActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.AddFavoriteActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.AddrBookSetNumberActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.AddrBookVerifyNumberActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.AddrBookItemDetailsActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.AddrBookSettingActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:hardwareAccelerated="false" android:name="com.zipow.videobox.MMChatActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.MMChatInfoActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.MMSelectContactsActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.SimpleActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.SystemNotificationActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.MyProfileActivity" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:label="@string/zm_app_name" android:launchMode="singleTask" android:name="com.zipow.videobox.WelcomeActivity" android:theme="@style/ZMTheme.MainWindow" android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:launchMode="singleTask" android:name="com.zipow.videobox.view.sip.SipInCallActivity" android:screenOrientation="portrait" android:theme="@style/ZMTheme.MainWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:hardwareAccelerated="false" android:name="com.zipow.videobox.ConfActivityNormal" android:process=":conf" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:hardwareAccelerated="false" android:name="com.zipow.videobox.PListActivity" android:process=":conf" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.ConfChatActivityOld" android:process=":conf" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.MeetingRunningInfoActivity" android:process=":conf" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.CallInActivity" android:process=":conf" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.SimpleInMeetingActivity" android:process=":conf" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.poll.PollingActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.poll.WebinarPollingActivity" android:process=":conf" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.poll.PollingResultActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.zipow.videobox.poll.WebinarPollingResultActivity" android:process=":conf" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="us.zoom.androidlib.app.ZMFileListActivity" android:theme="@style/ZMTheme.SubWindow"/>
+        <activity android:configChanges="keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:hardwareAccelerated="false" android:name="com.zipow.videobox.photopicker.PhotoPickerActivity" android:screenOrientation="portrait" android:theme="@style/ZMTheme.SubWindow" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <service android:exported="false" android:label="@string/zm_app_name" android:name="com.zipow.videobox.PTService"/>
+        <service android:exported="false" android:label="@string/zm_app_name" android:name="com.zipow.videobox.ConfService" android:process=":conf"/>
+        <service android:exported="false" android:label="@string/zm_app_name" android:name="com.zipow.videobox.SIPService" android:process=":sip"/>
+        <service android:exported="false" android:label="@string/zm_app_name" android:name="com.zipow.videobox.stabilility.StabilityService" android:process=":stb"/>
+        <service android:exported="false" android:label="@string/zm_app_name" android:name="com.zipow.videobox.kubi.KubiService"/>
+        <receiver android:enabled="false" android:exported="false" android:name="com.zipow.videobox.nos.NosmgrNetworkStatusReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="false" android:exported="false" android:name="com.zipow.videobox.WakeUpMessagesReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="true" android:name="com.zipow.videobox.ZMFirebaseInstanceIDService">   <intent-filter>       <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>   </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.zipow.videobox.ZMFirebaseMessagingService">   <intent-filter>       <action android:name="com.google.firebase.MESSAGING_EVENT"/>   </intent-filter>
+        </service>
+        <provider android:authorities="com.suirui.zhumu.ZMPreferencesProvider" android:exported="false" android:name="com.zipow.videobox.ZMPreferencesProvider"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:configChanges="orientation|screenSize" android:exported="true" android:name="com.box.androidsdk.content.auth.OAuthActivity"/>
+        <activity android:name="com.microsoft.aad.adal.AuthenticationActivity"/>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.suirui.zhumu.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="android.support.VERSION" android:value="26.1.0"/>
+        <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout n1:orientation="horizontal" n1:layout_width="fill_parent" n1:layout_height="@dimen/collaboration_cell_height"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <ImageView n1:gravity="center" n1:layout_gravity="center" n1:layout_width="@dimen/collaboration_thumb_size" n1:layout_height="@dimen/collaboration_thumb_size" n1:layout_marginLeft="@dimen/keyline_margin" n1:layout_marginRight="@dimen/keyline_margin" n1:src="@drawable/ic_box_contentsdk_add_grey_24dp" n1:scaleType="center" />
+    <LinearLayout n1:gravity="center_vertical" n1:orientation="vertical" n1:layout_width="fill_parent" n1:layout_height="fill_parent">
+        <TextView n1:textAppearance="@style/Theme.BoxSdk.Subhead" n1:textColor="@color/box_primary_text" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:text="@string/boxsdk_Use_a_different_account" n1:singleLine="true" />
+    </LinearLayout>
+</LinearLayout>

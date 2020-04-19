@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/zm_pop_menu_bg" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:minWidth="250dp">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/panelTypeFiles" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:src="@drawable/zm_accept_normal"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/zm_lbl_file_type_files" android:layout_weight="1" style="@style/ZMTextView"/>
+        <ImageView android:id="@+id/imgTypeFiles" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/zm_accept_normal"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/panelTypeImages" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:src="@drawable/zm_accept_normal"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/zm_lbl_file_type_images" android:layout_weight="1" style="@style/ZMTextView"/>
+        <ImageView android:id="@+id/imgTypeImages" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/zm_accept_normal"/>
+    </LinearLayout>
+</LinearLayout>

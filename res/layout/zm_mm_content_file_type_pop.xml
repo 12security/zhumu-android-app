@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout n1:orientation="vertical" n1:background="@drawable/zm_pop_menu_bg" n1:padding="5.0dip" n1:layout_width="fill_parent" n1:layout_height="fill_parent" n1:minWidth="250.0dip"
+  xmlns:n1="http://schemas.android.com/apk/res/android">
+    <LinearLayout n1:gravity="center_vertical" n1:orientation="horizontal" n1:id="@id/panelTypeFiles" n1:paddingTop="5.0dip" n1:paddingBottom="5.0dip" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+        <ImageView n1:visibility="gone" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_marginLeft="10.0dip" n1:src="@drawable/zm_accept_normal" />
+        <TextView n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_marginLeft="5.0dip" n1:text="@string/zm_lbl_file_type_files" n1:layout_weight="1.0" style="@style/ZMTextView" />
+        <ImageView n1:id="@id/imgTypeFiles" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:src="@drawable/zm_accept_normal" />
+    </LinearLayout>
+    <LinearLayout n1:gravity="center_vertical" n1:orientation="horizontal" n1:id="@id/panelTypeImages" n1:paddingTop="5.0dip" n1:paddingBottom="5.0dip" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+        <ImageView n1:visibility="gone" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_marginLeft="10.0dip" n1:src="@drawable/zm_accept_normal" />
+        <TextView n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:layout_marginLeft="5.0dip" n1:text="@string/zm_lbl_file_type_images" n1:layout_weight="1.0" style="@style/ZMTextView" />
+        <ImageView n1:id="@id/imgTypeImages" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:src="@drawable/zm_accept_normal" />
+    </LinearLayout>
+</LinearLayout>

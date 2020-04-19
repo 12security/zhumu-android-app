@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="abc_config_activityDefaultDur">220</integer>
+    <integer name="abc_config_activityShortDur">150</integer>
+    <integer name="cancel_button_image_alpha">127</integer>
+    <integer name="google_play_services_version">12451000</integer>
+    <integer name="status_bar_notification_info_maxnum">999</integer>
+    <integer name="zm_config_long_meeting_id_format_type">1</integer>
+    <integer name="zm_config_meeting_end_dialog_timeout">5</integer>
+    <integer name="zm_config_pmi_digits_for_pso">11</integer>
+    <integer name="zm_content_max_images_each_line">4</integer>
+    <integer name="zm_group_chat_topic_max_length">25</integer>
+    <integer name="zm_qa_question_input_max_lines">5</integer>
+    <integer name="zm_qa_question_show_max_lines">3</integer>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/zm_welcome_bg" android:scaleType="centerCrop"/>
+    <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="4">
+        <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.1">
+            <ImageView android:id="@+id/imgLogo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:src="@drawable/zm_logo"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zm_app_sub_title" style="@style/ZMTextView.AppSubTitle"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.9"/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/panelActions" android:paddingTop="10dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="0dp" android:minWidth="210dp" android:layout_weight="2">
+            <Button android:id="@+id/btnLogin" android:paddingLeft="35dp" android:paddingRight="35dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/zm_login_to_start_conf" style="@style/ZMButton.Index"/>
+            <Button android:id="@+id/btnSignup" android:paddingLeft="35dp" android:paddingRight="35dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/zm_btn_signup" style="@style/ZMButton.Index"/>
+            <Button android:id="@+id/btnReturnToConf" android:paddingLeft="35dp" android:paddingRight="35dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/zm_btn_return_to_conf" style="@style/ZMButton.Index"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/panelConnecting" android:paddingTop="40dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ProgressBar android:layout_gravity="center_vertical" android:id="@+id/progressBar1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" style="@style/ZMProgressBar.Small"/>
+                <TextView android:layout_gravity="center_vertical" android:id="@+id/txtConnecting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zm_connecting_facebook" style="@style/ZMTextView.Medium.OnDark"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

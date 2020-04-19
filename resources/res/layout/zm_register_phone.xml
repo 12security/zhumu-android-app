@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/viewLogin" android:background="@drawable/zm_window_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout android:id="@+id/panelTitleBar" android:layout_width="match_parent" android:layout_height="wrap_content" xmlns:ns1="http://schemas.android.com/apk/res-auto" ns1:zm_leftButton="@+id/btnBack" xmlns:ns2="http://schemas.android.com/apk/res-auto" ns2:zm_rightButton="@+id/btnSignup" xmlns:ns3="http://schemas.android.com/apk/res-auto" ns3:zm_title="@+id/txtTitle" style="@style/ZMTitleBar">
+        <Button android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:contentDescription="@string/zm_btn_back" style="@style/ZMBackButton"/>
+        <TextView android:id="@+id/txtTitle" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zm_verify_phone_title" style="@style/ZMTextView.Title"/>
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="0dp" android:paddingTop="@dimen/zm_setting_item_group_spacing" android:paddingRight="0dp" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <us.zoom.androidlib.widget.ZMSettingsCategory android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="@dimen/zm_setting_item_padding_left" android:paddingRight="@dimen/zm_setting_item_padding_right" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:gravity="center" android:id="@+id/et_phone" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/zm_verify_phone_mobile" android:singleLine="true" android:maxLength="11" android:inputType="phone" style="@style/ZMEditText.SettingsItem"/>
+                </LinearLayout>
+                <FrameLayout android:gravity="center_vertical" android:paddingLeft="@dimen/zm_setting_item_padding_left" android:paddingRight="@dimen/zm_setting_item_padding_right" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+                    <EditText android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/et_verify" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/zm_verify_phone_verify_code_hint" android:singleLine="true" android:maxLength="6" android:inputType="number" style="@style/ZMEditText.SettingsItem"/>
+                    <TextView android:enabled="false" android:textSize="13sp" android:textStyle="bold" android:textColor="@drawable/selector_text_color" android:gravity="right" android:layout_gravity="right|center_vertical|center_horizontal|center" android:id="@+id/btn_getverify_code" android:background="@drawable/selector_text_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zm_verify_phone_verify_code_send" android:singleLine="true"/>
+                    <TextView android:textSize="13sp" android:textColor="#747487" android:gravity="right" android:layout_gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tv_timer" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true"/>
+                </FrameLayout>
+            </us.zoom.androidlib.widget.ZMSettingsCategory>
+            <Button android:enabled="false" android:id="@+id/btn_register" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:layout_marginRight="20dp" android:text="@string/zm_verify_phone_btn" style="@style/ZMButton.HappyPath"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

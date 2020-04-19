@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<us.zoom.androidlib.widget.ZMSettingsCategory n1:orientation="vertical" n1:descendantFocusability="afterDescendants" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n2:zm_showTopDivider="false"
+  xmlns:n1="http://schemas.android.com/apk/res/android" xmlns:n2="http://schemas.android.com/apk/res-auto">
+    <LinearLayout n1:gravity="center|left" n1:id="@id/btnViewQAAnonymouse" n1:paddingTop="5.0dip" n1:paddingBottom="5.0dip" n1:focusable="true" n1:clickable="true" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+        <TextView n1:gravity="left" n1:focusable="false" n1:clickable="false" n1:duplicateParentState="true" n1:layout_width="0.0dip" n1:layout_height="wrap_content" n1:text="@string/zm_webinar_txt_qa_allow_anonymously" n1:layout_weight="1.0" style="@style/ZMTextView.SettingsItem" />
+        <CheckedTextView n1:id="@id/chkQAAnonymous" n1:clickable="false" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:checkMark="@drawable/zm_btn_toggle_default" />
+    </LinearLayout>
+</us.zoom.androidlib.widget.ZMSettingsCategory>
